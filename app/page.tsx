@@ -20,7 +20,7 @@ export default function Home() {
       <WorkflowSection />
       <TestimonialsSection />
       <UrgencySection />
-      {/* <FinalCtaSection /> */}
+      <FinalCtaSection />
       <Footer />
     </main>
   );
