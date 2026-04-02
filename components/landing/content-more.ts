@@ -1,6 +1,7 @@
 export const testimonialItems = [
   {
     avatarSrc: "/icons/avatar-female.svg",
+    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
     name: "Dr. Priya Nair",
     spec: "Dermatologist · Chennai",
     metric: "1.2M",
@@ -10,6 +11,7 @@ export const testimonialItems = [
   },
   {
     avatarSrc: "/icons/avatar-male.svg",
+    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
     name: "Dr. Arjun Mehta",
     spec: "Orthopaedic Surgeon · Mumbai",
     metric: "14.5K",
@@ -19,6 +21,7 @@ export const testimonialItems = [
   },
   {
     avatarSrc: "/icons/avatar-female.svg",
+    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
     name: "Dr. Sunitha Rajan",
     spec: "Gynaecologist · Coimbatore",
     metric: "3×",
@@ -28,6 +31,7 @@ export const testimonialItems = [
   },
   {
     avatarSrc: "/icons/avatar-male.svg",
+    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
     name: "Dr. Karthik Balaji",
     spec: "Paediatrician · Bengaluru",
     metric: "Rs.8L",
