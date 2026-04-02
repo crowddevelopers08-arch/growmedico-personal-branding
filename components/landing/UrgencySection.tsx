@@ -4,7 +4,7 @@ import { Container, SectionHeading, SectionTag, SvgIcon } from "./shared";
 
 export function UrgencySection() {
   return (
-    <section className="bg-[#0e1412] px-5 py-16 md:px-14 md:py-[110px]">
+    <section className="bg-[#0e1412] px-5 pb-16 pt-0 md:px-14 md:pb-[110px] md:pt-0">
       <Container>
         <SectionTag>Limited Availability</SectionTag>
         <SectionHeading

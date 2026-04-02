@@ -1,15 +1,97 @@
+"use client";
+
+import { useCallback, useState } from "react";
 import { testimonialItems } from "./content-more";
-import { Reveal } from "./Reveal";
 import { Container, SectionHeading, SectionTag, SvgIcon } from "./shared";
 
-// Same embed measurements as HeroCarousel
-const TOP_CHROME   = 56;
-const VIDEO_HEIGHT = 580;
-const IFRAME_H     = 840;
-const TOP_OFFSET   = (TOP_CHROME   / VIDEO_HEIGHT) * 100;  //   9.66%
-const IFRAME_H_PC  = (IFRAME_H     / VIDEO_HEIGHT) * 100;  // 144.83%
+// Instagram embed measurements — recalculated for pb-[120%] container
+const IFRAME_W   = 380;
+const TOP_CHROME = 62;
+const IFRAME_H   = 840;
+const PB_RATIO   = 1.2;
+
+const TOP_OFFSET_PC = (TOP_CHROME / (IFRAME_W * PB_RATIO)) * 100;
+const IFRAME_H_PC   = (IFRAME_H   / (IFRAME_W * PB_RATIO)) * 100;
+
+function ChevronLeft() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M11 4L6 9l5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChevronRight() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M7 4l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function TestimonialCard({ item }: { item: typeof testimonialItems[number] }) {
+  return (
+    <div className="flex flex-col overflow-hidden rounded-3xl border border-[rgba(51,189,176,0.14)] bg-[#141c1a]">
+      {/* Instagram Reel embed */}
+      <div className="relative overflow-hidden bg-[#0e1412] pb-[120%]">
+        <iframe
+          src={item.instagramVideoSrc}
+          title={`Instagram Reel by ${item.name}`}
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          scrolling="no"
+          style={{
+            position: "absolute",
+            top:     `-${TOP_OFFSET_PC}%`,
+            left:    "0",
+            width:   "100%",
+            height:  `${IFRAME_H_PC + TOP_OFFSET_PC}%`,
+            border:  "none",
+            display: "block",
+          }}
+        />
+      </div>
+
+      {/* Card content */}
+      <div className="flex flex-1 flex-col gap-3 px-4 py-4">
+        {/* Author row */}
+        <div className="flex items-center gap-2">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[rgba(51,189,176,0.12)]">
+            <SvgIcon src={item.avatarSrc} alt="" className="h-6 w-6" aria-hidden="true" />
+          </div>
+          <div className="min-w-0">
+            <div className="truncate text-[0.78rem] font-bold leading-tight text-[#f0faf9]">{item.name}</div>
+            <div className="truncate text-[0.68rem] leading-tight text-[#6b8a86]">{item.spec}</div>
+          </div>
+        </div>
+
+        {/* Metric row */}
+        <div className="flex items-baseline gap-2">
+          <div className="font-[var(--font-fraunces)] text-[1.6rem] font-semibold leading-none tracking-[-0.03em] text-[#33bdb0]">
+            {item.metric}
+          </div>
+          <div className="text-[0.6rem] uppercase tracking-[0.06em] text-[#4a6460]">
+            {item.label}
+          </div>
+        </div>
+
+        {/* Quote */}
+        <div className="text-[0.75rem] font-light leading-[1.6] text-[#d7ebe7]">
+          &quot;{item.quote}&quot;
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function TestimonialsSection() {
+  const [active, setActive] = useState(0);
+  const total = testimonialItems.length;
+
+  const prev = useCallback(() => setActive((i) => (i - 1 + total) % total), [total]);
+  const next = useCallback(() => setActive((i) => (i + 1) % total), [total]);
+
+  const visibleIndices = [0, 1, 2].map((i) => (active + i) % total);
+
   return (
     <section id="results" className="bg-[#0e1412] px-5 py-16 md:px-14 md:py-[110px]">
       <Container>
@@ -24,63 +106,61 @@ export function TestimonialsSection() {
           }
           body="Verified results from medical professionals who completed the 90-day programme."
         />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-14 md:gap-6">
-          {testimonialItems.map((item, index) => (
-            <Reveal key={item.name} delay={index * 100}>
-              <div className="flex flex-col overflow-hidden rounded-3xl border border-[rgba(51,189,176,0.14)] bg-[#141c1a] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(51,189,176,0.26)]">
-                {/* Instagram Reel embed — same clipping technique as HeroCarousel */}
-                <div className="relative overflow-hidden bg-[#0e1412] pb-[110%] sm:pb-[105%] md:pb-[100%]">
-                  <iframe
-                    src={item.instagramVideoSrc}
-                    title={`Instagram Reel by ${item.name}`}
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                    scrolling="no"
-                    style={{
-                      position: "absolute",
-                      top:    `-${TOP_OFFSET}%`,
-                      left:   "0",
-                      width:  "100%",
-                      height: `${IFRAME_H_PC + TOP_OFFSET}%`,
-                      border: "none",
-                      display: "block",
-                    }}
-                  />
-                </div>
 
-                {/* Card content */}
-                <div className="flex flex-1 flex-col px-6 py-7 md:px-7 md:py-8">
-                  {/* Author + Metric in one row */}
-                  <div className="flex items-center justify-between gap-4">
-                    {/* Author */}
-                    <div className="flex items-center gap-3 md:gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[rgba(51,189,176,0.12)] md:h-14 md:w-14">
-                        <SvgIcon src={item.avatarSrc} alt="" className="h-10 w-10 md:h-12 md:w-12" aria-hidden="true" />
-                      </div>
-                      <div>
-                        <div className="text-[0.95rem] font-bold text-[#f0faf9] md:text-[0.98rem]">{item.name}</div>
-                        <div className="text-[0.78rem] text-[#6b8a86] md:text-[0.82rem]">{item.spec}</div>
-                      </div>
-                    </div>
+        {/* Carousel */}
+        <div className="mt-12 md:mt-14">
+          {/* Cards row */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            {/* Card 0 — always visible */}
+            <div className="transition-all duration-500">
+              <TestimonialCard item={testimonialItems[visibleIndices[0]]} />
+            </div>
+            {/* Card 1 — sm+ */}
+            <div className="hidden transition-all duration-500 sm:block">
+              <TestimonialCard item={testimonialItems[visibleIndices[1]]} />
+            </div>
+            {/* Card 2 — lg+ */}
+            <div className="hidden transition-all duration-500 lg:block">
+              <TestimonialCard item={testimonialItems[visibleIndices[2]]} />
+            </div>
+          </div>
 
-                    {/* Metric */}
-                    <div className="shrink-0 text-right">
-                      <div className="font-[var(--font-fraunces)] text-[2rem] font-semibold leading-none tracking-[-0.03em] text-[#33bdb0] md:text-[2.4rem]">
-                        {item.metric}
-                      </div>
-                      <div className="mt-1 text-[0.65rem] uppercase tracking-[0.08em] text-[#4a6460] md:text-[0.7rem]">
-                        {item.label}
-                      </div>
-                    </div>
-                  </div>
+          {/* Controls */}
+          <div className="mt-8 flex items-center justify-center gap-5">
+            {/* Prev */}
+            <button
+              onClick={prev}
+              aria-label="Previous testimonial"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(51,189,176,0.25)] bg-[#141c1a] text-[#6b8a86] transition-all duration-200 hover:border-[#33bdb0] hover:bg-[rgba(51,189,176,0.12)] hover:text-[#33bdb0]"
+            >
+              <ChevronLeft />
+            </button>
 
-                  {/* Quote */}
-                  <div className="mt-5 text-[0.9rem] font-light leading-[1.8] text-[#d7ebe7] md:mt-6 md:text-[0.94rem]">
-                    &quot;{item.quote}&quot;
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+            {/* Dots */}
+            <div className="flex items-center gap-2">
+              {testimonialItems.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                  className={`rounded-full transition-all duration-300 ${
+                    i === active
+                      ? "h-2.5 w-6 bg-[#33bdb0]"
+                      : "h-2 w-2 bg-[rgba(51,189,176,0.3)] hover:bg-[rgba(51,189,176,0.55)]"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Next */}
+            <button
+              onClick={next}
+              aria-label="Next testimonial"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(51,189,176,0.25)] bg-[#141c1a] text-[#6b8a86] transition-all duration-200 hover:border-[#33bdb0] hover:bg-[rgba(51,189,176,0.12)] hover:text-[#33bdb0]"
+            >
+              <ChevronRight />
+            </button>
+          </div>
         </div>
       </Container>
     </section>
