@@ -90,7 +90,7 @@ export function TestimonialsSection() {
   const prev = useCallback(() => setActive((i) => (i - 1 + total) % total), [total]);
   const next = useCallback(() => setActive((i) => (i + 1) % total), [total]);
 
-  const visibleIndices = [0, 1, 2].map((i) => (active + i) % total);
+  const visibleCount = Math.min(total, 3);`r`n  const visibleIndices = Array.from({ length: visibleCount }, (_, i) => (active + i) % total);
 
   return (
     <section id="results" className="bg-[#0e1412] px-5 py-16 md:px-14 md:py-[110px]">
@@ -166,3 +166,4 @@ export function TestimonialsSection() {
     </section>
   );
 }
+

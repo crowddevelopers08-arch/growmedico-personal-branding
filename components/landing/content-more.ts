@@ -1,43 +1,23 @@
 export const testimonialItems = [
   {
     avatarSrc: "/icons/avatar-female.svg",
-    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
-    name: "Dr. Priya Nair",
-    spec: "Dermatologist · Chennai",
-    metric: "1.2M",
-    label: "Views in 90 Days",
+    instagramVideoSrc: "https://www.instagram.com/p/DV0xFCwAR4Y/embed/",
+    name: "Client Testimonial 01",
+    spec: "Instagram Video Testimonial",
+    metric: "Brand + Performance",
+    label: "Growth Partnership",
     quote:
-      "I had zero content strategy. Now I wake up to DMs from patients who found me through Reels.",
+      "Combining Personal Branding with Performance Marketing to drive real growth. Grateful for this testimonial and the partnership! Personal Branding, Performance Marketing, Digital Growth.",
   },
   {
     avatarSrc: "/icons/avatar-male.svg",
-    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
-    name: "Dr. Arjun Mehta",
-    spec: "Orthopaedic Surgeon · Mumbai",
-    metric: "14.5K",
-    label: "New Followers in 78 Days",
+    instagramVideoSrc: "https://www.instagram.com/p/DVBUz7Dgd6w/embed/",
+    name: "Client Testimonial 02",
+    spec: "Instagram Video Testimonial",
+    metric: "Brand + Performance",
+    label: "Digital Growth",
     quote:
-      "Three hospitals called me for consulting after watching my content. The ROI is unreal.",
-  },
-  {
-    avatarSrc: "/icons/avatar-female.svg",
-    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
-    name: "Dr. Sunitha Rajan",
-    spec: "Gynaecologist · Coimbatore",
-    metric: "3×",
-    label: "Increase in OPD Bookings",
-    quote:
-      "Patients come in already trusting me completely because they've been following my content.",
-  },
-  {
-    avatarSrc: "/icons/avatar-male.svg",
-    instagramVideoSrc: "https://www.instagram.com/reel/DWY5fChDicY/embed/",
-    name: "Dr. Karthik Balaji",
-    spec: "Paediatrician · Bengaluru",
-    metric: "Rs.8L",
-    label: "Online Revenue · First 90 Days",
-    quote:
-      "I launched my parenting course and sold out in 4 days. Never imagined this was possible.",
+      "Combining Personal Branding with Performance Marketing to drive real growth. Grateful for this testimonial and the partnership! Personal Branding, Performance Marketing, Digital Growth.",
   },
 ];
 
@@ -84,3 +64,4 @@ export const startTodayList = [
   "Media, speaking calls and brand partnerships start arriving organically",
   "A second income stream built entirely from your existing knowledge",
 ];
+
