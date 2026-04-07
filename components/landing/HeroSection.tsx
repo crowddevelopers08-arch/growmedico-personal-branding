@@ -27,7 +27,7 @@ function ProofItem({ value, suffix, label, decimalPlaces = 0 }: {
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden px-5 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-12 md:px-10 md:pt-14 lg:flex lg:min-h-svh lg:items-center lg:px-14 lg:py-0">
+    <section className="relative overflow-hidden px-5 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-12 md:px-10 md:pt-14 lg:flex lg:min-h-svh lg:items-center max-[470px]:pt-6 lg:px-14 lg:py-0">
 
       {/* Background decorations */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(51,189,176,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(51,189,176,0.04)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black_30%,transparent_100%)]" />

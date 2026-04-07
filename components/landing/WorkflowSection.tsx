@@ -72,7 +72,7 @@ const steps = [
 
 export function WorkflowSection() {
   return (
-    <section id="workflow" className="bg-[#080c0b] px-5 py-16 md:px-14 md:py-[110px]">
+    <section id="workflow" className="bg-[#080c0b] px-5 py-16 max-[470px]:py-6 md:px-14 md:py-[110px]">
       <Container>
         <SectionTag>How It Works</SectionTag>
         <SectionHeading
@@ -87,7 +87,7 @@ export function WorkflowSection() {
         />
 
         {/* Connector line visible on lg+ */}
-        <div className="relative mt-12 md:mt-16">
+        <div className="relative mt-12 max-[470px]:mt-6 md:mt-16">
           {/* Desktop: horizontal connector behind step numbers */}
           <div className="absolute left-0 right-0 top-[22px] hidden h-px bg-[linear-gradient(90deg,transparent,rgba(51,189,176,0.18)_20%,rgba(51,189,176,0.18)_80%,transparent)] lg:block" />
 

@@ -4,7 +4,7 @@ import { Container, SectionHeading, SectionTag, SvgIcon } from "./shared";
 
 export function UrgencySection() {
   return (
-    <section className="bg-[#0e1412] px-5 pb-16 pt-0 md:px-14 md:pb-[110px] md:pt-0">
+    <section className="bg-[#0e1412] px-5 pb-16 pt-6 md:px-14 md:pb-[110px] max-[470px]:pb-6 md:pt-0">
       <Container>
         <SectionTag>Limited Availability</SectionTag>
         <SectionHeading
@@ -16,7 +16,7 @@ export function UrgencySection() {
             </>
           }
         />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-14 md:gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 md:mt-14 max-[470px]:mt-6 md:gap-6 lg:grid-cols-3">
           {urgencyCards.map((item, index) => (
             <Reveal key={item.title} delay={index * 100}>
               <div className="rounded-3xl border border-[rgba(51,189,176,0.14)] bg-[#141c1a] px-6 py-7 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(51,189,176,0.26)] md:px-7 md:py-8">

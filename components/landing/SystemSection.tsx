@@ -4,7 +4,7 @@ import { Container, SectionHeading, SectionTag, SvgIcon } from "./shared";
 
 export function SystemSection() {
   return (
-    <section id="system" className="bg-[#0e1412] px-5 py-16 md:px-14 md:py-[110px]">
+    <section id="system" className="bg-[#0e1412] px-5 py-16 max-[470px]:py-6 md:px-14 md:py-[110px]">
       <Container>
         <SectionTag>The System</SectionTag>
         <SectionHeading
@@ -17,7 +17,7 @@ export function SystemSection() {
           }
           body="Built around your schedule. Executed alongside our team. Zero learning curve."
         />
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.04)] bg-[rgba(255,255,255,0.04)] sm:grid-cols-2 md:mt-16 xl:grid-cols-3">
+        <div className="mt-12 max-[470px]:mt-6 grid gap-px overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.04)] bg-[rgba(255,255,255,0.04)] sm:grid-cols-2 md:mt-16 xl:grid-cols-3">
           {systemItems.map((item, index) => (
             <Reveal key={item.number} delay={(index % 3) * 120}>
               <div className="group relative overflow-hidden bg-[#141c1a] px-7 py-8 transition-colors duration-300 hover:bg-[#1a2422] md:px-9 md:py-10">

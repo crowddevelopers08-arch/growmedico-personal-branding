@@ -3,9 +3,9 @@ import { ArrowIcon } from "./shared";
 
 export function FinalCtaSection() {
   return (
-    <section id="apply" className="relative overflow-hidden bg-[#080c0b] px-5 py-16 md:px-14 md:py-[120px]">
+    <section id="apply" className="relative overflow-hidden bg-[#080c0b] px-5 py-16 max-[470px]:py-6 md:px-14 md:py-[120px]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(51,189,176,0.16),transparent_55%)]" />
-      <div className="relative mx-auto max-w-[900px] rounded-[32px] border border-[rgba(51,189,176,0.18)] bg-[#141c1a] px-6 py-12 text-center shadow-[0_30px_80px_rgba(0,0,0,0.28)] md:px-12 md:py-16">
+      <div className="relative mx-auto max-w-[900px] rounded-[32px] border border-[rgba(51,189,176,0.18)] bg-[#141c1a] px-6 py-12 text-center shadow-[0_30px_80px_rgba(0,0,0,0.28)] md:px-12 max-[470px]:py-6 md:py-16">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(51,189,176,0.22)] bg-[rgba(51,189,176,0.12)] px-4 py-2 text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-[#33bdb0] md:mb-8 md:text-[0.78rem]">
           <span className="h-[7px] w-[7px] rounded-full bg-[#33bdb0] animate-[pulse-glow_2s_infinite]" />
           Only 5 Spots Available

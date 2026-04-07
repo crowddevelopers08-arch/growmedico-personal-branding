@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function OfferSection() {
   return (
-    <section id="offer" className="bg-[#080c0b] px-5 py-16 md:px-14 md:py-[110px]">
+    <section id="offer" className="bg-[#080c0b] px-5 py-16 max-[470px]:py-6 md:px-14 md:py-[110px]">
       <Container>
         <SectionTag>The Guarantee</SectionTag>
         <Reveal>
