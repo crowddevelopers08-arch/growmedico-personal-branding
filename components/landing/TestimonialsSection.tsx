@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { testimonialItems } from "./content-more";
 import { Container, SectionHeading, SectionTag, SvgIcon } from "./shared";
 
@@ -73,14 +73,6 @@ function InlineInstagramVideo({ item }: { item: typeof testimonialItems[number] 
 
 export function TestimonialsSection() {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setActiveVideoIndex((currentIndex) => (currentIndex + 1) % LEFT_COLUMN_VIDEOS.length);
-    }, 5000);
-
-    return () => window.clearInterval(intervalId);
-  }, []);
 
   const activeVideo = LEFT_COLUMN_VIDEOS[activeVideoIndex];
 
