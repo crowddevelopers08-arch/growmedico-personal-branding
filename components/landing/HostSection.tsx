@@ -16,7 +16,7 @@ export function HostSection() {
                 </div>
               </div>
               <div className="-mt-6 mx-auto grid max-w-[88%] grid-cols-3 gap-px overflow-hidden rounded-2xl border border-[rgba(51,189,176,0.14)] bg-[rgba(255,255,255,0.04)]">
-                {[["80+", "Doctors"], ["4.9\u2605", "Rating"], ["3M+", "Views"]].map(([value, label]) => (
+                {[["80+", "Doctors"], ["4.9\u2605", "Rating"], ["1M+", "Views"]].map(([value, label]) => (
                   <div key={label} className="bg-[#1a2422] px-3 py-4 text-center md:px-5">
                     <div className="font-[var(--font-fraunces)] text-[1.3rem] font-semibold text-[#f0faf9] md:text-[1.5rem]">{value}</div>
                     <div className="mt-1 text-[0.68rem] uppercase tracking-[0.08em] text-[#6b8a86] md:text-[0.72rem]">{label}</div>

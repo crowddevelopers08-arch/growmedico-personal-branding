@@ -1,6 +1,6 @@
 export const marqueeItems = [
   "10,000 Followers in 90 Days",
-  "OR 3 Million Views Guaranteed",
+  "OR 1 Million Views Guaranteed",
   "Medical Content That Builds Real Trust",
   "For Doctors, Surgeons & Allied Health",
   "India's #1 Medical Growth System",
@@ -69,7 +69,7 @@ export const systemItems = [
     number: "06",
     iconSrc: "/icons/system-analytics.svg",
     title: "Weekly Live Reviews",
-    body: "Every week, we analyse your performance, adapt strategies in real-time, and ensure that you stay on track for your 10K or 3M target.",
+    body: "Every week, we analyse your performance, adapt strategies in real-time, and ensure that you stay on track for your 10K or 1M target.",
     tag: "Accountability",
   },
 ];

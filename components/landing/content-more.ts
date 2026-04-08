@@ -59,7 +59,7 @@ export const waitList = [
 ];
 
 export const startTodayList = [
-  "10,000 followers or 3 million views - guaranteed in 90 days",
+  "10,000 followers or 1 million views - guaranteed in 90 days",
   "Premium patients find you before they ever ask for a referral",
   "Media, speaking calls and brand partnerships start arriving organically",
   "A second income stream built entirely from your existing knowledge",

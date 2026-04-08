@@ -66,7 +66,7 @@ const steps = [
       </svg>
     ),
     title: "Results & Growth",
-    body: "At the end of 90 days, you'll see significant results: either 10,000 followers or 3 million views — or we keep working for free until we hit the target.",
+    body: "At the end of 90 days, you'll see significant results: either 10,000 followers or 1 million views — or we keep working for free until we hit the target.",
   },
 ];
 
