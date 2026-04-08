@@ -90,7 +90,7 @@ export function HeroSection() {
 
             {/* Stats */}
             <div className="mt-6 grid animate-[rise-in_0.9s_0.4s_ease_both] grid-cols-4 gap-3 border-t border-[rgba(255,255,255,0.05)] pt-6 sm:mt-7 sm:gap-5 sm:pt-7">
-              <ProofItem value={3}  suffix="M+" label="Views Generated" />
+              <ProofItem value={1}  suffix="M+" label="Views Generated" />
               <ProofItem value={10} suffix="K+" label="Followers Added" />
               <ProofItem value={80} suffix="+"  label="Doctors Coached" />
               <ProofItem value={90}              label="Days. That's All." />
