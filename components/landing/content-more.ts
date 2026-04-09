@@ -36,7 +36,7 @@ export const bonusItems = [
 export const urgencyCards = [
   {
     iconSrc: "/icons/system-calendar.svg",
-    title: "Next Cohort: May 2026",
+    title: "Next Group: May 2026",
     body: "Applications close as soon as 5 spots are filled. Once closed, the next intake will be in three months. Early applicants receive priority scheduling.",
   },
   {

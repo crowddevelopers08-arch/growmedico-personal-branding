@@ -56,7 +56,7 @@ export function HeroSection() {
             <div className="mb-4 animate-[rise-in_0.9s_0.05s_ease_both] sm:mb-5">
               <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(51,189,176,0.22)] bg-[rgba(51,189,176,0.12)] px-4 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-[#33bdb0]">
                 <span className="h-[6px] w-[6px] animate-[pulse-glow_2s_infinite] rounded-full bg-[#33bdb0]" />
-                Applications Open — May 2026 Cohort
+                Applications Open — May 2026
               </div>
             </div>
 
