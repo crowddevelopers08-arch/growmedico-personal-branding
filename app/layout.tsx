@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Grow Medico - Turn Your Expertise Into Influence",
   description:
     "Grow Medico helps doctors turn clinical expertise into a trusted digital presence.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
