@@ -69,10 +69,12 @@ function ArrowButton({
   direction,
   onClick,
   disabled,
+  className = "",
 }: {
   direction: "prev" | "next";
   onClick: () => void;
   disabled: boolean;
+  className?: string;
 }) {
   return (
     <button
@@ -80,10 +82,10 @@ function ArrowButton({
       onClick={onClick}
       disabled={disabled}
       aria-label={direction === "prev" ? "Show previous case studies" : "Show next case studies"}
-      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(51,189,176,0.2)] bg-[rgba(20,28,26,0.9)] text-[#d7ebe7] transition-all duration-300 hover:border-[rgba(51,189,176,0.45)] hover:text-[#33bdb0] disabled:cursor-not-allowed disabled:opacity-35"
+      className={`inline-flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(51,189,176,0.2)] bg-[rgba(20,28,26,0.92)] text-[#d7ebe7] transition-all duration-300 hover:border-[rgba(51,189,176,0.45)] hover:text-[#33bdb0] disabled:cursor-not-allowed disabled:opacity-35 ${className}`}
     >
       <span aria-hidden="true" className="text-lg leading-none">
-        {direction === "prev" ? "‹" : "›"}
+        {direction === "prev" ? "<" : ">"}
       </span>
     </button>
   );
@@ -184,45 +186,60 @@ export function CaseStudiesSection() {
           <p className="max-w-[720px] text-[1rem] font-semibold leading-[1.8] text-[#8eaea9] md:text-[1.04rem]">
             Review-style client proof cards showing how strong content systems turn doctors into visible, trusted brands.
           </p>
-          <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
             <ArrowButton direction="prev" onClick={showPrevious} disabled={activeIndex === 0} />
             <ArrowButton direction="next" onClick={showNext} disabled={activeIndex === maxIndex} />
           </div>
         </div>
 
-        <div className="mt-12 overflow-hidden md:mt-14">
-          <div
-            className="flex transition-transform duration-500 ease-out"
-            style={{
-              transform: `translateX(-${activeIndex * 100}%)`,
-            }}
-          >
-            {slides.map((slide, slideIndex) => (
-              <div key={slideIndex} className="min-w-0 shrink-0 basis-full">
-                <div className={`grid items-stretch gap-6 ${visibleCards === 2 ? "lg:grid-cols-2" : "grid-cols-1"}`}>
-                  {slide.map((item, itemIndex) => {
-                    const accentIndex = slideIndex + itemIndex;
+        <div className="relative mt-12 md:mt-14">
+          <ArrowButton
+            direction="prev"
+            onClick={showPrevious}
+            disabled={activeIndex === 0}
+            className="absolute left-0 top-1/2 z-20 -translate-x-3 -translate-y-1/2 md:hidden"
+          />
+          <ArrowButton
+            direction="next"
+            onClick={showNext}
+            disabled={activeIndex === maxIndex}
+            className="absolute right-0 top-1/2 z-20 translate-x-3 -translate-y-1/2 md:hidden"
+          />
 
-                    return (
-                      <Reveal key={item.name} delay={accentIndex * 80} className="h-full">
-                        <CaseStudyCard
-                          item={item}
-                          accent={
-                            accentIndex % 4 === 0
-                              ? "bg-[radial-gradient(circle,rgba(51,189,176,0.14)_0%,transparent_68%)]"
-                              : accentIndex % 4 === 1
-                                ? "bg-[radial-gradient(circle,rgba(240,250,249,0.08)_0%,transparent_68%)]"
-                                : accentIndex % 4 === 2
-                                  ? "bg-[radial-gradient(circle,rgba(51,189,176,0.1)_0%,transparent_68%)]"
-                                  : "bg-[radial-gradient(circle,rgba(107,138,134,0.12)_0%,transparent_68%)]"
-                          }
-                        />
-                      </Reveal>
-                    );
-                  })}
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-out"
+              style={{
+                transform: `translateX(-${activeIndex * 100}%)`,
+              }}
+            >
+              {slides.map((slide, slideIndex) => (
+                <div key={slideIndex} className="min-w-0 shrink-0 basis-full">
+                  <div className={`grid items-stretch gap-6 ${visibleCards === 2 ? "lg:grid-cols-2" : "grid-cols-1"}`}>
+                    {slide.map((item, itemIndex) => {
+                      const accentIndex = slideIndex + itemIndex;
+
+                      return (
+                        <Reveal key={item.name} delay={accentIndex * 80} className="h-full">
+                          <CaseStudyCard
+                            item={item}
+                            accent={
+                              accentIndex % 4 === 0
+                                ? "bg-[radial-gradient(circle,rgba(51,189,176,0.14)_0%,transparent_68%)]"
+                                : accentIndex % 4 === 1
+                                  ? "bg-[radial-gradient(circle,rgba(240,250,249,0.08)_0%,transparent_68%)]"
+                                  : accentIndex % 4 === 2
+                                    ? "bg-[radial-gradient(circle,rgba(51,189,176,0.1)_0%,transparent_68%)]"
+                                    : "bg-[radial-gradient(circle,rgba(107,138,134,0.12)_0%,transparent_68%)]"
+                            }
+                          />
+                        </Reveal>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 

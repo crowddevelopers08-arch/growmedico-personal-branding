@@ -21,7 +21,8 @@ export function OfferSection() {
                 </strong>
               </div>
               <p className="mx-auto mb-10 mt-5 max-w-[640px] text-[1.02rem] font-semibold leading-[1.8] text-[#88a7a2] md:mb-12 md:text-[1.12rem]">
-                We don&apos;t just build a personal brand; we work alongside you as an extension of your team. From content creation to publishing, our team handles it all. If you don&apos;t hit the target, we keep working until you do – no extra charge.
+                We don&apos;t just build a personal brand; we work alongside you as an extension of your team. From content creation to publishing, our team handles it all. If you don&apos;t hit the target, we keep working until you do.
+                <span className="mt-3 block text-[1.35rem] font-black text-[#33bdb0] md:text-[1.55rem]">No extra charge.</span>
               </p>
               <div className="mb-10 flex flex-wrap items-center justify-center gap-3 md:mb-12">
                 <div className="rounded-full border border-[rgba(51,189,176,0.22)] bg-[#1a2422] px-6 py-3 text-center md:px-7">
