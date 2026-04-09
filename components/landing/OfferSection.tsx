@@ -17,7 +17,7 @@ export function OfferSection() {
               <div className="font-[var(--font-fraunces)] text-[clamp(2.2rem,6vw,5rem)] font-light leading-[1.06] tracking-[-0.03em] text-[#f0faf9]">
                 10,000 Real Followers
                 <strong className="block font-semibold italic text-[#33bdb0]">
-                  or 1 Million Views - in 90 Days.
+                  or 1 Million Views - in 90 Days Guarantee.
                 </strong>
               </div>
               <p className="mx-auto mb-10 mt-5 max-w-[600px] text-[0.95rem] font-light leading-[1.75] text-[#6b8a86] md:mb-12 md:text-[1.05rem]">
