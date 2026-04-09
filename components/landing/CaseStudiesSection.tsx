@@ -115,7 +115,7 @@ function CaseStudyCard({
 
 export function CaseStudiesSection() {
   return (
-    <section className="bg-[#080c0b] px-5 py-16 md:px-14 md:py-[110px]">
+    <section className="bg-[#080c0b] px-5 py-16 max-[470px]:py-6 md:px-14 md:py-[110px]">
       <Container>
         <SectionTag>Case Studies: Real Results, Real Doctors</SectionTag>
         <SectionHeading
@@ -128,7 +128,7 @@ export function CaseStudiesSection() {
           }
         />
 
-        <div className="mt-12 grid gap-6 md:mt-14 lg:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:mt-14 max-[470px]:mt-8 lg:grid-cols-2">
           {featuredCaseStudies.map((item, index) => (
             <Reveal key={item.name} delay={index * 100}>
               <CaseStudyCard
@@ -139,7 +139,7 @@ export function CaseStudiesSection() {
           ))}
         </div>
 
-        <div className="mt-14 md:mt-16">
+        <div className="mt-14 max-[470px]:mt-8 md:mt-16">
           <SectionTag>More Client Wins</SectionTag>
           <SectionHeading
             title={
