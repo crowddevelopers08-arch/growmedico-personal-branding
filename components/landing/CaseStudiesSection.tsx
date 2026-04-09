@@ -152,10 +152,11 @@ export function CaseStudiesSection() {
     return () => window.removeEventListener("resize", syncVisibleCards);
   }, []);
 
-  const maxIndex = Math.max(0, caseStudies.length - visibleCards);
-  const slides = Array.from({ length: maxIndex + 1 }, (_, start) =>
-    caseStudies.slice(start, start + visibleCards),
+  const slides = Array.from(
+    { length: Math.ceil(caseStudies.length / visibleCards) },
+    (_, index) => caseStudies.slice(index * visibleCards, index * visibleCards + visibleCards),
   );
+  const maxIndex = Math.max(0, slides.length - 1);
 
   useEffect(() => {
     setActiveIndex((current) => Math.min(current, maxIndex));
