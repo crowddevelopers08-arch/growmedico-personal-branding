@@ -26,12 +26,12 @@ export function CurriculumSection() {
                 </div>
                 <div>
                   <h4 className="mb-2 text-[0.97rem] font-bold text-[#f0faf9] md:text-[1.02rem]">{item.title}</h4>
-                  <p className="text-[0.88rem] font-light leading-[1.75] text-[#6b8a86] md:text-[0.92rem]">{item.body}</p>
+                  <p className="text-[0.98rem] font-semibold leading-[1.75] text-[#6b8a86] md:text-[1rem]">{item.body}</p>
                   <div className="mt-3 flex flex-wrap gap-2 md:mt-4">
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-[rgba(51,189,176,0.22)] bg-[rgba(51,189,176,0.08)] px-3 py-1 text-[0.72rem] font-medium text-[#9cb7b3] md:text-[0.74rem]"
+                        className="rounded-full border border-[rgba(51,189,176,0.22)] bg-[rgba(51,189,176,0.08)] px-3 py-1 text-[0.82rem] font-bold text-[#9cb7b3] md:text-[0.84rem]"
                       >
                         {tag}
                       </span>

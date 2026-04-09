@@ -28,8 +28,8 @@ export function SystemSection() {
                   <SvgIcon src={item.iconSrc} alt="" className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <h4 className="mb-2 text-[0.95rem] font-bold text-[#f0faf9] md:mb-2.5 md:text-base">{item.title}</h4>
-                <p className="text-[0.84rem] font-light leading-[1.7] text-[#6b8a86] md:text-[0.86rem]">{item.body}</p>
-                <div className="mt-4 inline-block rounded-full bg-[rgba(51,189,176,0.12)] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.06em] text-[#33bdb0]">
+                <p className="text-[0.96rem] font-semibold leading-[1.7] text-[#6b8a86] md:text-[0.98rem]">{item.body}</p>
+                <div className="mt-4 inline-block rounded-full bg-[rgba(51,189,176,0.12)] px-3 py-1 text-[0.9rem] font-extrabold uppercase tracking-[0.06em] text-[#33bdb0]">
                   {item.tag}
                 </div>
               </div>

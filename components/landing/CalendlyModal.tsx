@@ -77,10 +77,10 @@ export function CalendlyModal() {
           >
             <div className="flex items-start justify-between gap-4 border-b border-[rgba(255,255,255,0.06)] px-4 py-4 sm:px-5 md:px-6">
               <div className="min-w-0">
-                <div className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#33bdb0] sm:text-[0.72rem]">
+                <div className="text-[0.8rem] font-bold uppercase tracking-[0.12em] text-[#33bdb0] sm:text-[0.84rem]">
                   Free Strategy Call
                 </div>
-                <div className="mt-1 text-[0.92rem] leading-[1.5] text-[#c8ddd9] sm:text-sm md:text-base">
+                <div className="mt-1 text-[1rem] font-semibold leading-[1.5] text-[#c8ddd9] sm:text-[1rem] md:text-[1.05rem]">
                   Pick a time that works for you.
                 </div>
               </div>

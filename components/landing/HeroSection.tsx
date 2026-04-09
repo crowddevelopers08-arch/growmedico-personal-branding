@@ -20,7 +20,7 @@ function ProofItem({ value, suffix, label, decimalPlaces = 0 }: {
       <div className="font-[var(--font-fraunces)] text-[1.5rem] font-semibold leading-none tracking-[-0.03em] text-[#f0faf9] xl:text-[1.8rem]">
         <CountUpStat value={value} suffix={suffix} decimalPlaces={decimalPlaces} />
       </div>
-      <div className="mt-1 text-center text-[0.63rem] uppercase tracking-[0.06em] text-[#4a6460] lg:text-left">{label}</div>
+      <div className="mt-1 text-center text-[0.78rem] font-bold uppercase tracking-[0.06em] text-[#4a6460] lg:text-left">{label}</div>
     </div>
   );
 }
@@ -54,7 +54,7 @@ export function HeroSection() {
 
             {/* Badge */}
             <div className="mb-4 animate-[rise-in_0.9s_0.05s_ease_both] sm:mb-5">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(51,189,176,0.22)] bg-[rgba(51,189,176,0.12)] px-4 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-[#33bdb0]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(51,189,176,0.22)] bg-[rgba(51,189,176,0.12)] px-4 py-1.5 text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#33bdb0]">
                 <span className="h-[6px] w-[6px] animate-[pulse-glow_2s_infinite] rounded-full bg-[#33bdb0]" />
                 Applications Open — May 2026
               </div>
@@ -70,7 +70,7 @@ export function HeroSection() {
             </h1>
 
             {/* Subheadline */}
-            <p className="mb-5 mt-4 max-w-[500px] animate-[rise-in_0.9s_0.2s_ease_both] text-[0.9rem] font-light leading-[1.8] text-[#6b8a86] sm:mb-6 sm:mt-5 md:text-[0.95rem]">
+            <p className="mb-5 mt-4 max-w-[500px] animate-[rise-in_0.9s_0.2s_ease_both] text-[1rem] font-semibold leading-[1.8] text-[#6b8a86] sm:mb-6 sm:mt-5 md:text-[1.04rem]">
               Most doctors spend a decade mastering medicine – then remain completely invisible online. Grow Medico gives you a done-with-you system, where our team handles everything from content creation to publishing, ensuring you earn trust, attract patients, and build real influence.
             </p>
 

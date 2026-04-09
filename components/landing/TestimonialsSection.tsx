@@ -38,7 +38,7 @@ function TestimonialCard({ item }: { item: typeof testimonialItems[number] }) {
           </div>
           <div className="min-w-0">
             <div className="truncate text-sm font-bold leading-tight text-[#f0faf9]">{item.name}</div>
-            <div className="truncate text-[0.78rem] leading-tight text-[#6b8a86]">{item.spec}</div>
+            <div className="truncate text-[0.9rem] font-bold leading-tight text-[#6b8a86]">{item.spec}</div>
           </div>
         </div>
 
@@ -46,10 +46,10 @@ function TestimonialCard({ item }: { item: typeof testimonialItems[number] }) {
           <div className="font-[var(--font-fraunces)] text-[1.9rem] font-semibold leading-none tracking-[-0.03em] text-[#33bdb0]">
             {item.metric}
           </div>
-          <div className="text-[0.68rem] uppercase tracking-[0.08em] text-[#4a6460]">{item.label}</div>
+          <div className="text-[0.82rem] font-bold uppercase tracking-[0.08em] text-[#4a6460]">{item.label}</div>
         </div>
 
-        <div className="text-sm font-light leading-[1.8] text-[#d7ebe7]">&quot;{item.quote}&quot;</div>
+        <div className="text-sm font-semibold leading-[1.8] text-[#d7ebe7]">&quot;{item.quote}&quot;</div>
       </div>
     </div>
   );

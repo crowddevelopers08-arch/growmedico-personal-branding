@@ -50,7 +50,7 @@ export function Navbar() {
 
         <div className="hidden flex-1 items-center justify-center gap-1 md:flex">
           {NAV_LINKS.map(({ href, label }) => (
-            <Link key={href} href={href} className="rounded-lg px-3.5 py-2 text-[0.82rem] font-medium tracking-[0.03em] text-[#6b8a86] transition-all duration-200 hover:bg-[rgba(51,189,176,0.07)] hover:text-[#33bdb0]">
+            <Link key={href} href={href} className="rounded-lg px-3.5 py-2 text-[0.92rem] font-bold tracking-[0.03em] text-[#6b8a86] transition-all duration-200 hover:bg-[rgba(51,189,176,0.07)] hover:text-[#33bdb0]">
               {label}
             </Link>
           ))}
@@ -59,7 +59,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={openCalendlyPopup}
-          className="btn-anim hidden shrink-0 items-center gap-2 rounded-full bg-[#33bdb0] px-5 py-2.5 text-[0.82rem] font-bold tracking-[0.02em] text-[#080c0b] shadow-[0_0_24px_rgba(51,189,176,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#3fd4c5] hover:shadow-[0_0_40px_rgba(51,189,176,0.42)] md:inline-flex"
+          className="btn-anim hidden shrink-0 items-center gap-2 rounded-full bg-[#33bdb0] px-5 py-2.5 text-[0.92rem] font-bold tracking-[0.02em] text-[#080c0b] shadow-[0_0_24px_rgba(51,189,176,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#3fd4c5] hover:shadow-[0_0_40px_rgba(51,189,176,0.42)] md:inline-flex"
         >
           <CalendarIcon />
           Book Free Call
@@ -73,7 +73,7 @@ export function Navbar() {
       <div className={`overflow-hidden border-t border-[rgba(51,189,176,0.08)] bg-[rgba(8,12,11,0.98)] transition-all duration-300 ease-in-out md:hidden ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="flex flex-col gap-1 px-4 pb-5 pt-3">
           {NAV_LINKS.map(({ href, label }) => (
-            <Link key={href} href={href} onClick={() => setOpen(false)} className="flex items-center rounded-xl px-4 py-3 text-[0.92rem] font-medium text-[#6b8a86] transition-colors hover:bg-[rgba(51,189,176,0.07)] hover:text-[#33bdb0]">
+            <Link key={href} href={href} onClick={() => setOpen(false)} className="flex items-center rounded-xl px-4 py-3 text-[0.92rem] font-bold text-[#6b8a86] transition-colors hover:bg-[rgba(51,189,176,0.07)] hover:text-[#33bdb0]">
               {label}
             </Link>
           ))}

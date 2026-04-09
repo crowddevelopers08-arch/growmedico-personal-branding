@@ -25,7 +25,7 @@ export function InclusionsSection() {
                   <SvgIcon src={item.iconSrc} alt="" className="h-8 w-8" aria-hidden="true" />
                 </div>
                 <h4 className="mb-4 text-[0.97rem] font-bold leading-[1.45] text-[#f0faf9] md:mb-5 md:text-[1.02rem]">{item.title}</h4>
-                <ul className="space-y-2.5 text-[0.88rem] font-light leading-[1.75] text-[#6b8a86] md:space-y-3 md:text-[0.9rem]">
+                <ul className="space-y-2.5 text-[0.98rem] font-semibold leading-[1.75] text-[#6b8a86] md:space-y-3 md:text-[1rem]">
                   {item.points.map((point) => (
                     <li key={point} className="flex gap-3">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#33bdb0]" />

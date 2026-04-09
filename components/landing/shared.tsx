@@ -13,7 +13,7 @@ export function Container({
 
 export function SectionTag({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-[18px] inline-flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[#33bdb0] before:h-px before:w-6 before:bg-[#33bdb0] before:content-['']">
+    <div className="mb-[18px] inline-flex items-center gap-2 text-[0.8rem] font-black uppercase tracking-[0.14em] text-[#33bdb0] before:h-px before:w-6 before:bg-[#33bdb0] before:content-['']">
       {children}
     </div>
   );
@@ -32,7 +32,7 @@ export function SectionHeading({
         {title}
       </h2>
       {body ? (
-        <p className="mt-3 max-w-[500px] text-base font-light leading-[1.8] text-[#6b8a86]">
+        <p className="mt-3 max-w-[500px] text-base font-semibold leading-[1.8] text-[#6b8a86]">
           {body}
         </p>
       ) : null}
@@ -77,7 +77,7 @@ export function OutlineButton({
   return (
     <Link
       href={href}
-      className={`btn-anim inline-flex items-center gap-2 rounded-full border border-[rgba(51,189,176,0.3)] px-8 py-4 text-[0.9rem] font-medium text-[#33bdb0] transition-all duration-300 hover:border-[#33bdb0] hover:bg-[rgba(51,189,176,0.12)] ${className}`}
+      className={`btn-anim inline-flex items-center gap-2 rounded-full border border-[rgba(51,189,176,0.3)] px-8 py-4 text-[0.9rem] font-bold text-[#33bdb0] transition-all duration-300 hover:border-[#33bdb0] hover:bg-[rgba(51,189,176,0.12)] ${className}`}
     >
       {children}
     </Link>

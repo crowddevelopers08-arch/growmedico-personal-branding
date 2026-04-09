@@ -18,7 +18,7 @@ export function ProblemSection() {
                   </div>
                   <div>
                     <h4 className="mb-1.5 text-[0.95rem] font-bold text-[#f0faf9] md:text-[0.97rem]">{item.title}</h4>
-                    <p className="text-[0.84rem] font-light leading-[1.65] text-[#6b8a86] md:text-[0.86rem]">{item.body}</p>
+                    <p className="text-[0.96rem] font-semibold leading-[1.7] text-[#6b8a86] md:text-[0.98rem]">{item.body}</p>
                   </div>
                 </li>
               </Reveal>
@@ -33,13 +33,13 @@ export function ProblemSection() {
                 <br />
                 Nobody taught you how to <em>reach</em> them.
               </blockquote>
-              <p className="text-[0.88rem] font-light leading-[1.75] text-[#6b8a86]">
+              <p className="text-[0.98rem] font-semibold leading-[1.75] text-[#6b8a86]">
                 The most trusted voice in any room should be the doctor's. Online, that's not what's happening - and it's not your fault. The tools, systems and strategies to build a medical brand are completely different from anything you learned in training.
               </p>
-              <p className="mt-4 text-[0.88rem] font-light leading-[1.75] text-[#6b8a86]">
+              <p className="mt-4 text-[0.98rem] font-semibold leading-[1.75] text-[#6b8a86]">
                 Grow Medico exists to close that gap. Not with generic social media tips, but with a framework built specifically for how healthcare credibility works.
               </p>
-              <div className="mt-6 inline-block rounded-full bg-[#33bdb0] px-5 py-2.5 text-[0.78rem] font-extrabold uppercase tracking-[0.06em] text-[#080c0b]">
+              <div className="mt-6 inline-block rounded-full bg-[#33bdb0] px-5 py-2.5 text-[0.88rem] font-black uppercase tracking-[0.06em] text-[#080c0b]">
                 90-Day Results - or We Work for Free
               </div>
             </div>

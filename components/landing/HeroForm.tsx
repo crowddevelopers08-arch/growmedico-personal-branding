@@ -48,10 +48,10 @@ function ShieldIcon() {
 }
 
 const INPUT_CLASS =
-  "w-full rounded-lg border border-[rgba(255,255,255,0.07)] bg-[#1a2422] py-2.5 pl-9 pr-3 text-[0.88rem] text-[#f0faf9] placeholder-[#4a6460] outline-none transition-all duration-200 focus:border-[rgba(51,189,176,0.5)] focus:ring-2 focus:ring-[rgba(51,189,176,0.10)]";
+  "w-full rounded-lg border border-[rgba(255,255,255,0.07)] bg-[#1a2422] py-2.5 pl-9 pr-3 text-[0.98rem] text-[#f0faf9] placeholder-[#4a6460] outline-none transition-all duration-200 focus:border-[rgba(51,189,176,0.5)] focus:ring-2 focus:ring-[rgba(51,189,176,0.10)]";
 
 const LABEL_CLASS =
-  "mb-1 block text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-[#6b8a86]";
+  "mb-1 block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#6b8a86]";
 
 export function HeroForm() {
   const [form, setForm] = useState({ name: "", email: "", phone: "" });
@@ -62,14 +62,14 @@ export function HeroForm() {
         <div className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-[radial-gradient(circle,rgba(51,189,176,0.16)_0%,transparent_65%)]" />
 
         <div className="relative z-10 mb-4">
-          <div className="mb-0.5 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-[#33bdb0]">
+          <div className="mb-0.5 text-[0.8rem] font-bold uppercase tracking-[0.12em] text-[#33bdb0]">
             Free Strategy Call
           </div>
-          <h3 className="font-[var(--font-fraunces)] text-[1.2rem] font-light leading-[1.25] text-[#f0faf9] sm:text-[1.3rem]">
+          <h3 className="font-[var(--font-fraunces)] text-[1.2rem] font-normal leading-[1.25] text-[#f0faf9] sm:text-[1.3rem]">
             Book your free{" "}
             <em className="italic text-[#33bdb0]">30-min call</em>
           </h3>
-          <p className="mt-1 text-[0.78rem] font-light leading-[1.55] text-[#6b8a86]">
+          <p className="mt-1 text-[0.92rem] font-bold leading-[1.6] text-[#6b8a86]">
             We&apos;ll map your 90-day growth plan - zero commitment.
           </p>
         </div>
@@ -129,20 +129,20 @@ export function HeroForm() {
           <button
             type="button"
             onClick={openCalendlyPopup}
-            className="mt-0.5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#33bdb0] py-3 text-[0.88rem] font-bold tracking-[0.02em] text-[#080c0b] shadow-[0_0_32px_rgba(51,189,176,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#3fd4c5] hover:shadow-[0_0_50px_rgba(51,189,176,0.4)]"
+            className="mt-0.5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#33bdb0] py-3 text-[0.98rem] font-bold tracking-[0.02em] text-[#080c0b] shadow-[0_0_32px_rgba(51,189,176,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#3fd4c5] hover:shadow-[0_0_50px_rgba(51,189,176,0.4)]"
           >
             Book My Free Strategy Call
             <SendIcon />
           </button>
 
           <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 pt-0.5">
-            <div className="flex items-center gap-1 text-[0.67rem] font-light text-[#4a6460]">
+            <div className="flex items-center gap-1 text-[0.8rem] font-bold text-[#4a6460]">
               <ShieldIcon />
               Private &amp; never shared
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-[0.67rem] text-[#4a6460]">4.9 Rating</span>
-              <span className="text-[0.67rem] text-[#4a6460]">Reply in 24 hrs</span>
+              <span className="text-[0.8rem] font-bold text-[#4a6460]">4.9 Rating</span>
+              <span className="text-[0.8rem] font-bold text-[#4a6460]">Reply in 24 hrs</span>
             </div>
           </div>
         </form>

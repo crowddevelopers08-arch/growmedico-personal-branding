@@ -1,4 +1,5 @@
 import { CalendlyModal } from "@/components/landing/CalendlyModal";
+import { CaseStudiesSection } from "@/components/landing/CaseStudiesSection";
 import { CustomCursor } from "@/components/landing/CustomCursor";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
 import { Footer } from "@/components/landing/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
       <SystemSection />
       <WorkflowSection />
       <TestimonialsSection />
+      <CaseStudiesSection />
       <UrgencySection />
       <FinalCtaSection />
       <Footer />

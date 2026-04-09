@@ -112,7 +112,7 @@ export function WorkflowSection() {
                   <h4 className="mb-2 text-[0.97rem] font-bold leading-[1.3] text-[#f0faf9] md:text-[1.02rem]">
                     {step.title}
                   </h4>
-                  <p className="text-[0.85rem] font-light leading-[1.75] text-[#6b8a86]">
+                  <p className="text-[0.96rem] font-semibold leading-[1.75] text-[#6b8a86]">
                     {step.body}
                   </p>
 

@@ -4,7 +4,7 @@ import { Container, SectionHeading, SectionTag, SvgIcon } from "./shared";
 
 export function UrgencySection() {
   return (
-    <section className="bg-[#0e1412] px-5 pb-16 pt-6 md:px-14 md:pb-[110px] max-[470px]:pb-6 md:pt-0">
+    <section className="bg-[#0e1412] px-5 pb-16 pt-6 md:px-14 md:pb-[110px] max-[470px]:pb-6 md:pt-16">
       <Container>
         <SectionTag>Limited Availability</SectionTag>
         <SectionHeading
@@ -24,7 +24,7 @@ export function UrgencySection() {
                   <SvgIcon src={item.iconSrc} alt="" className="h-7 w-7" aria-hidden="true" />
                 </div>
                 <h4 className="mb-2.5 text-[0.97rem] font-bold text-[#f0faf9] md:text-[1.02rem]">{item.title}</h4>
-                <p className="text-[0.87rem] font-light leading-[1.75] text-[#6b8a86] md:text-[0.9rem]">{item.body}</p>
+                <p className="text-[0.98rem] font-semibold leading-[1.75] text-[#6b8a86] md:text-[1rem]">{item.body}</p>
               </div>
             </Reveal>
           ))}
@@ -33,7 +33,7 @@ export function UrgencySection() {
           <Reveal>
             <div className="rounded-3xl border border-[rgba(201,76,76,0.2)] bg-[rgba(53,19,19,0.55)] p-6 md:p-7">
               <div className="mb-4 font-[var(--font-fraunces)] text-[1.5rem] font-normal text-[#f0faf9] md:mb-5 md:text-[1.7rem]">If you wait another 90 days...</div>
-              <ul className="space-y-3 text-[0.9rem] font-light leading-[1.8] text-[#d8c8c8] md:text-[0.95rem]">
+              <ul className="space-y-3 text-[1rem] font-semibold leading-[1.8] text-[#d8c8c8] md:text-[1.04rem]">
                 {waitList.map((item) => (
                   <li key={item} className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f87171]" />
@@ -46,7 +46,7 @@ export function UrgencySection() {
           <Reveal delay={100}>
             <div className="rounded-3xl border border-[rgba(51,189,176,0.2)] bg-[rgba(13,43,39,0.55)] p-6 md:p-7">
               <div className="mb-4 font-[var(--font-fraunces)] text-[1.5rem] font-normal text-[#f0faf9] md:mb-5 md:text-[1.7rem]">When you start today...</div>
-              <ul className="space-y-3 text-[0.9rem] font-light leading-[1.8] text-[#d7ebe7] md:text-[0.95rem]">
+              <ul className="space-y-3 text-[1rem] font-semibold leading-[1.8] text-[#d7ebe7] md:text-[1.04rem]">
                 {startTodayList.map((item) => (
                   <li key={item} className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#33bdb0]" />

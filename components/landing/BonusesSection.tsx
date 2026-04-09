@@ -21,7 +21,7 @@ export function BonusesSection() {
           <Reveal>
             <div>
               <div className="font-[var(--font-fraunces)] text-[clamp(3rem,9vw,6rem)] font-semibold leading-none tracking-[-0.04em] text-[#33bdb0]">â‚¹5L</div>
-              <p className="mt-3 max-w-[420px] text-[0.95rem] font-light leading-[1.8] text-[#6b8a86] md:text-base">
+              <p className="mt-3 max-w-[420px] text-[1rem] font-semibold leading-[1.8] text-[#6b8a86] md:text-[1.05rem]">
                 Every bonus below is included free when you join the Grow Medico 90-Day Programme.
               </p>
               <div className="mt-6 md:mt-7">
@@ -37,7 +37,7 @@ export function BonusesSection() {
               {bonusItems.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-3 rounded-2xl border border-[rgba(255,255,255,0.04)] bg-[#1a2422] px-4 py-3 text-[0.88rem] font-light text-[#d7ebe7] md:text-[0.92rem]"
+                  className="flex items-center gap-3 rounded-2xl border border-[rgba(255,255,255,0.04)] bg-[#1a2422] px-4 py-3 text-[0.98rem] font-bold text-[#d7ebe7] md:text-[1rem]"
                 >
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgba(51,189,176,0.12)] text-[#33bdb0]">+</span>
                   {item}
