@@ -100,6 +100,15 @@ export default function ThankYouPage() {
       </section>
 
       <Footer />
+      
+      {/* Facebook Pixel - SubmitApplication Event */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            fbq('track', 'SubmitApplication');
+          `,
+        }}
+      />
     </main>
   );
 }
