@@ -1,6 +1,6 @@
 "use client";
 
-const HERO_VIDEO_URL = "https://ik.imagekit.io/ho1vq6jkid/ad%203%20v1.mov";
+const HERO_VIDEO_URL = "/adss.mov";
 
 export function HeroCarousel() {
   return (
